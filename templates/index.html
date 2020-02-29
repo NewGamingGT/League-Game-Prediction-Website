@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>League Game Prediction</h1>
+            <h2>Predict the probablility of each team winning with 95% accuracy</h2>
+        </header>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Blue Team</th>
+                    <th>Red Team</th>
+                    <th>None of the teams</th>
+                </tr>
+                <tr>
+                    <th>First Blood</th>
+                    <th><input type="radio" name="first_blood" value=1 required></th>
+                    <th><input type="radio" name="first_blood" value=2 required></th>
+                    <th><input type="radio" name="first_blood" value=0 required></th>
+                </tr>
+                <tr>
+                    <th>First Tower</th>
+                    <th><input type="radio" name="first_tower" value=1 required></th>
+                    <th><input type="radio" name="first_tower" value=2 required></th>
+                    <th><input type="radio" name="first_tower" value=0 class="0" required></th>
+                </tr>
+                <tr>
+                    <th>First Inhibitor</th>
+                    <th><input type="radio" name="first_inhibitor" value=1 required></th>
+                    <th><input type="radio" name="first_inhibitor" value=2 required></th>
+                    <th><input type="radio" name="first_inhibitor" value=0 class="0" required></th>
+                </tr>
+                <tr>
+                    <th>First Baron</th>
+                    <th><input type="radio" name="first_baron" value=1 required></th>
+                    <th><input type="radio" name="first_baron" value=2 required></th>
+                    <th><input type="radio" name="first_baron" value=0 class="0" required></th>
+                </tr>
+                <tr>
+                    <th>First Dragon</th>
+                    <th><input type="radio" name="first_dragon" value=1 required></th>
+                    <th><input type="radio" name="first_dragon" value=2 required></th>
+                    <th><input type="radio" name="first_dragon" value=0 class="0" required></th>
+                </tr>
+                <tr>
+                    <th>First Rift Herald</th>
+                    <th><input type="radio" name="first_rift_herald" value=1 required></th>
+                    <th><input type="radio" name="first_rift_herald" value=2 required></th>
+                    <th><input type="radio" name="first_rift_herald" value=0 required></th>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Blue Team</th>
+                    <th>Red Team</th>
+                </tr>
+                <tr>
+                    <th>Tower Kills</th>
+                    <th><input type="number" name="blue_team_tower_kills" min="0" max="11" required></th>
+                    <th><input type="number" name="red_team_tower_kills" min="0" max="11" required></th>
+                </tr>
+                <tr>
+                    <th>Inhibitor Kills</th>
+                    <th><input type="number" name="blue_team_inhibitor_kills" min="0" required></th>
+                    <th><input type="number" name="red_team_inhibitor_kills" min="0" required></th>
+                </tr>
+                <tr>
+                    <th>Baron Kills</th>
+                    <th><input type="number" name="blue_team_baron_kills" min="0" required></th>
+                    <th><input type="number" name="red_team_baron_kills" min="0" required></th>
+                </tr>
+                <tr>
+                    <th>Dragon Kills</th>
+                    <th><input type="number" name="blue_team_dragon_kills" min="0" required></th>
+                    <th><input type="number" name="red_team_dragon_kills" min="0" required></th>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+    </main>
+    <script src="../static/main.js"></script>
+</body>
+</html>

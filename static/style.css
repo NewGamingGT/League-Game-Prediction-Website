@@ -1,0 +1,153 @@
+@font-face {
+    font-family: Moon-Bold;
+    src: url(../MoonBold.otf);
+}
+
+@font-face {
+    font-family: Moon-Light;
+    src: url(../MoonLight.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top left,#4FACFE, #00F2FE);
+    background-size: cover;
+    display: flex;
+}
+
+main {
+    width: 45%;
+    height: 555px;
+    margin: auto;
+    display: block;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .16);
+    border: #CCCCCC 1px solid;
+    padding: 15px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: Moon-Bold, monospace;
+}
+
+h2 {
+    font-family: Moon-light, monospace;
+    font-size: 18px;
+}
+
+table, th, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table {
+    width: 500px;
+}
+
+th {
+    padding: 5px;
+    font-family: monospace;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input[type=submit] {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+@media only screen and (max-width: 1460px) {
+    main {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    main {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    table, form {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    input[type=number] {
+        width: 100%;
+    }
+
+    th {
+        padding: 3px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    main {
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main {
+        width: 95%;
+    }
+    h2 {
+        font-size: 14px;
+    }
+}
+
